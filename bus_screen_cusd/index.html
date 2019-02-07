@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/style.css"> <!-- CSS reset -->
+
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+  <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZtZePBTLXPSvNiZL3wPoNmbAugSiJdWc&callback=initMap" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script language="javascript" type="text/javascript" src="scripts/maps.js"> </script>
+  <script language="javascript" type="text/javascript" src="scripts/getVehicles.js"> </script>
+  <script src="scripts/createTimetable.js" type="text/javascript"></script>
+  <script src="scripts/getTimetable.js" type="text/javascript"></script> 
+  <script src="scripts/getWeather.js" type="text/javascript"></script> 
+  <script src="scripts/setWeather.js" type="text/javascript"></script> 
+  <script src="scripts/getAlert.js" type="text/javascript"></script>
+<!--   just finished pasting scripts
+ -->
+
+
+	<title>Bus Screen</title>
+</head>
+<body>
+	<div class="section1">
+		<div id="logo">
+			<img src="img/logo.png">
+		</div>
+		<div id="title">
+			<h1>Schwarz CPA</h1>
+		</div>
+		<div id="date">
+			<h3>3:40 PM</h3>
+			<h3>10/3/2018</h3>
+		</div>
+
+	</div>
+	<div class="section2">
+		<div id="service">
+			<p>Service</p>
+		</div>
+		<div id="destination">
+			<p>Destination</p>
+		</div>
+		<div id="time">
+			<p>Arriving In</p>
+		</div>
+		<div id="route">
+			<p>Arriving Next</p>
+		</div>
+	</div>
+	<div class="section3">
+		<div id="left_sec">
+			<div id="serv_info">
+	<!-- 			<div class="serv_info_sub">
+					<p>30</p>
+				</div>
+				<div class="serv_info_sub">
+					<p>30</p>
+				</div>
+				<div class="serv_info_sub">
+					<p>30</p>
+				</div>
+				<div class="serv_info_sub">
+					<p>30</p>
+				</div>
+				<div class="serv_info_sub">
+					<p>30</p>
+				</div>
+				<div class="serv_info_sub">
+					<p>30</p>
+				</div>
+				<div class="serv_info_sub">
+					<p>30</p>
+				</div> -->
+			</div>
+			<div id="dest_info">
+				<div class="dest_info_sub">
+					<h5>Ithaca Mall</h5>
+					<p>via Collegetown</p>
+				</div>
+				<div class="dest_info_sub">
+					<h5>Ithaca Mall</h5>
+					<p>via Collegetown</p>
+				</div>
+				<div class="dest_info_sub">
+					<h5>Ithaca Mall</h5>
+					<p>via Collegetown</p>
+				</div>
+				<div class="dest_info_sub">
+					<h5>Ithaca Mall</h5>
+					<p>via Collegetown</p>
+				</div>
+				<div class="dest_info_sub">
+					<h5>Ithaca Mall</h5>
+					<p>via Collegetown</p>
+				</div>
+				<div class="dest_info_sub">
+					<h5>Ithaca Mall</h5>
+					<p>via Collegetown</p>
+				</div>
+				<div class="dest_info_sub">
+					<h5>Ithaca Mall</h5>
+					<p>via Collegetown</p>
+				</div>
+			</div>
+			<div id="time_info">
+				<div class="time_info_sub">
+					<p>2 min</p>
+				</div>
+				<div class="time_info_sub">
+					<p>2 min</p>
+				</div>
+				<div class="time_info_sub">
+					<p>2 min</p>
+				</div>
+				<div class="time_info_sub">
+					<p>2 min</p>
+				</div>
+				<div class="time_info_sub">
+					<p>2 min</p>
+				</div>
+				<div class="time_info_sub">
+					<p>2 min</p>
+				</div>
+				<div class="time_info_sub">
+					<p>2 min</p>
+				</div>
+			</div>
+		</div>
+		<div id="right_sec">
+			<div id="next_name">
+				<h2>Route 30</h2>
+			</div>
+			<div id="bus_line"></div>
+			<div id="stop"></div>
+		</div>
+
+	</div>
+	<div class="section4">
+		<h2 id="alert">Detour change for Route 14 effective 10/27/18. For more info visit tcatbus.com</h2>
+	</div>
+
+<script>
+
+
+
+
+ 		function runClock() {
+		var today = new Date();
+	    var h = today.getHours();
+	    var m = today.getMinutes();
+	    var s = today.getSeconds();
+	    m = checkTime(m);
+	    s = checkTime(s);
+	    document.getElementById("date").innerHTML =
+	    h + ":" + m + ":" + s;
+	    var t = setTimeout(runClock, 500);
+	}
+
+	function checkTime(i) {
+    	if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    	return i;
+	}
+
+	// 	function createTimetablePanel() {
+	// 	var timeTablePanel = document.createElement("div");
+	// 	timeTablePanel.id = "timetable_panel"
+	// 	document.getElementById("back_panel").appendChild(timeTablePanel);
+
+	// }
+
+	// //Create the top reference panel for the timetable, indicating "Route", "Dest", "EDT"
+	// function createRefPanel() {
+	// 	var refPanel = document.createElement("div");
+	// 	refPanel.id = "ref_panel"
+
+	// 	var route = document.createElement("div");
+	// 	route.id = "ref_route";
+	// 	route.innerHTML = "Route";
+
+	// 	var dest = document.createElement("div");
+	// 	dest.id = "ref_dest";
+	// 	dest.innerHTML = "Destination";
+
+	// 	var edt = document.createElement("div");
+	// 	edt.id = "ref_edt";
+	// 	edt.innerHTML = "Departing";
+
+	// 	refPanel.appendChild(route);
+	// 	refPanel.appendChild(dest);
+	// 	refPanel.appendChild(edt);
+
+	// 	document.getElementById("timetable_panel").appendChild(refPanel);
+
+	// }
+
+	// createTimetablePanel();
+	// createRefPanel();
+
+	runClock();
+
+	getTimetable();
+	getDest();
+
+	// update();
+
+	// function update () {
+	//   // $.when(getWeather()).done(function (a1, a2, a3) {
+	//   // 	weather = a1;
+	//   // 	setWeather(a1);
+	//   // 	console.log(weather);
+	//   // })
+ //      $.when(getTimetable()).done(function (data, a2, a3) {
+	//         timetable_info = data;
+	//         var schedule = Timetable(timetable_info);
+	//         displayTimetable(schedule, colormap, colors, colorcount);
+	//   })
+ //      .then(function () {
+ //      	$.when(getBuses2()).done(function (a1, a2, a3) {
+	//         bus_locs = a1;
+	//         DrawMap();
+	//         MapRoute(bus_locs, colormap, colors, colorcount);
+ //      	})
+ //      })
+ //      $.when(getAlert()).done(function (a1, a2, a3) {
+ //      	// Alerts shouldn't be on same timeout as the map/timetable
+ //        alerts = a1;
+	// 	console.log(alerts);
+	// 	//displayAlerts(alert);
+	// 	fillScrollBar(alerts);
+ //        console.log(colormap)
+	//   })
+ //      .then(function() {
+ //        setTimeout(update, 60000); // call it again once a minute - can be faster
+ //      });
+ //    }
+
+
+
+</script>
+</body>
+</html>

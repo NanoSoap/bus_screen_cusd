@@ -374,3 +374,18 @@ margin-inline-end: 0px;
 color:white;
 font-weight: normal;
 }
+
+#time{
+  float:left;
+  width:17vw;
+  height:100%;
+  /*background-color: yellow;*/
+  color:white;
+}
+#time p {
+  font-weight: bold;
+  font-size:1.5em;
+  margin-left:13px;
+  margin-block-start: 0.4em;
+    margin-block-end: 0.5em;
+}

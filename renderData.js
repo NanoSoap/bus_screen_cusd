@@ -12,8 +12,11 @@ function render(msg) {
             name = departure.Trip.InternalSignDesc
             routeId = route.RouteId
             departures.push({arrival: arrival, name:name, routeId:routeId})
+            
         }
+
     }
+    console.log(departures);
     sortedDepartures = departures.sort(function(a, b) { return a.arrival - b.arrival; })
     for (let dep of sortedDepartures) {
         if (dep.arrival > 0) {

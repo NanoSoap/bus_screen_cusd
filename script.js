@@ -1,6 +1,6 @@
 $(document).ready(function() {
     getTimetable();
-    //runClock();
+    runClock();
 	// console.log(data)
 	// data[0].RouteDirections;
 	// for (let route of data[0].RouteDirections) {
@@ -18,9 +18,9 @@ function runClock() {
     m = checkTime(m);
     s = checkTime(s);
     
-    $("#clock").html(h + ":" + m + ":" + s);
+    $(".clock").html(h + ":" + m + ":" + s);
     
-    $("#date").html(year+'/'+today.getMonth()+'/'+today.getDate());
+    $(".year").html(year+'/'+today.getMonth()+'/'+today.getDate());
     var t = setTimeout(runClock, 1000);
 }
 function checkTime(i) {

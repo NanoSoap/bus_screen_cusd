@@ -59,10 +59,10 @@ function render(msg) {
   for (let dep of sortedDepartures) {
     if (!map.has(dep.routeId)) {
       map.set(dep.routeId, true)
-      result.push(dep)
+      unique_deps.push(dep)
     }
   }
-  for (let dep of unique_deps) {
+  for (let dep of sortedDepartures) {
     if (dep.arrival > 0) {
       $('#time_info').append("<div class='time_info_sub'><p>" + dep.arrival + " min</p></div>");
       $("#serv_info").append("<div class='serv_info_sub'><p>" + dep.routeId + "</p></div>");
@@ -107,7 +107,7 @@ function renderDate() {
 function renderTimetable() {
   // header auth token from TCAT
   var token = 'Bearer e5159b89-86c1-3cca-8412-59de037c674b';
-  var currStop = 100;
+  var currStop = 165;
   $.ajax({
     url: 'https://gateway.api.cloud.wso2.com:443/t/mystop/tcat/v1/rest/StopDepartures/Get/' + currStop,
     type: 'GET',

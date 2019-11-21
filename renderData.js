@@ -158,5 +158,5 @@ function render_currStop(msg){
       name = msg[i].Description
     }
   }
-  $('#title').append('<div class="dest_info_sub"><h5>' + name + ' </h5></div>');
+  $('#title').append('<div class="title"><h3>' + name + ' </h3></div>');
 }

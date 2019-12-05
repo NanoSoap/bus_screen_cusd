@@ -21,14 +21,14 @@ function min_departure(route, name, routeId) {
   return min
 }
 
-// returns the result of subracting time t2 from time t1. Returns -1 if t2 is
+// returns the result of subracting time t2 from time t1. Returns -1 if t2 is 
 // after t1
 function subtract_time(t1, t2) {
   if (t1.getHours() == t2.getHours()) {
     return (t1.getMinutes() - t2.getMinutes())
   }
   else if (t1.getHours() > t2.getHours()) {
-    return 60 + t1.getMinutes() - t2.getMinutes()
+    return 60 * (t1.getHours() - t2.getHours()) + t1.getMinutes() - t2.getMinutes()
   }
   else return -1
 
@@ -46,6 +46,7 @@ function render(msg) {
       for (let departure of route.Departures) {
         eta = new Date(departure.ETALocalTime)
         arrival = subtract_time(eta, (new Date)) // current time minus arrival
+        console.log(arrival)
         name = departure.Trip.InternalSignDesc
         routeId = route.RouteId
         departures.push({ arrival: arrival, name: name, routeId: routeId })
@@ -56,17 +57,16 @@ function render(msg) {
   unique_deps = []
   map = new Map()
   for (let dep of sortedDepartures) {
-    if (!map.has((dep.routeId))) {
+    if (!map.has(dep.routeId)) {
       map.set(dep.routeId, dep.arrival)
       unique_deps.push(dep)
-    }
-    else {
-      if ((map.get(dep.routeId) != dep.arrival)) {
+    } else {
+      if (map.get(dep.RouteId) != dep.arrival) {
         unique_deps.push(dep)
       }
     }
   }
-  for (let dep of sortedDepartures) {
+  for (let dep of unique_deps) {
     if (dep.arrival > 0) {
       $('#time_info').append("<div class='time_info_sub'><p>" + dep.arrival + " min</p></div>");
       $("#serv_info").append("<div class='serv_info_sub'><p>" + dep.routeId + "</p></div>");
@@ -111,7 +111,7 @@ function renderDate() {
 function renderTimetable() {
   // header auth token from TCAT
   var token = 'Bearer e5159b89-86c1-3cca-8412-59de037c674b';
-  var currStop = 165;
+  var currStop = 100;
   $.ajax({
     url: 'https://gateway.api.cloud.wso2.com:443/t/mystop/tcat/v1/rest/StopDepartures/Get/' + currStop,
     type: 'GET',
@@ -125,6 +125,7 @@ function renderTimetable() {
 
   renderDate();
   renderStops();
+  renderRoute();
 }
 
 
@@ -134,29 +135,47 @@ function renderTimetable() {
 setTimeout($(document).ready(renderTimetable), 100)
 
 
-function renderStops() {
+function renderStops(currStop) {
   var token = 'Bearer e5159b89-86c1-3cca-8412-59de037c674b';
   $.ajax({
     url: "https://gateway.api.cloud.wso2.com:443/t/mystop/tcat/v1/rest/Stops/GetAllStops",
-    type: 'GET',
     dataType: 'json',
     beforeSend: function (xhr) {
       xhr.setRequestHeader("Authorization", token);
     },
-    success: render_currStop
-
+    success: render2
   });
 }
 
 
-function render_currStop(msg){
-  currStop = 165
-  name = 0
-
-  for (var i=0; i < msg.length; i++ ){
-    if (msg[i].StopId == currStop){
-      name = msg[i].Description
+function render2(msg) {
+  var currStop = 100;
+  for (let stop of msg) {
+    if (stop.StopId == currStop) {
+      var name = stop.Description;
+      $('#title').html("<h1>" + name + "</h1>");
     }
   }
-  $('#title').append('<div class="title"><h3>' + name + ' </h3></div>');
+}
+
+function renderRoute() {
+  var token = 'Bearer e5159b89-86c1-3cca-8412-59de037c674b';
+  $.ajax({
+    url: "https://gateway.api.cloud.wso2.com:443/t/mystop/tcat/v1/rest/Stops/GetAllStops",
+    dataType: 'json',
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader("Authorization", token);
+    },
+    success: render3
+  });
+}
+
+
+function render3(msg) {
+  console.log("testing");
+  /*
+  var nextBus = sortedDepartures[0].routeId;
+  var currentStop = msg[0].StopID;
+  var nextBusDirection = sortedDepartures[0].name;
+*/
 }

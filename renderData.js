@@ -42,7 +42,7 @@ function subtract_time(t1, t2) {
 function render(msg) {
   departures = []
   for (let route of msg[0].RouteDirections) {
-    if (route.Direction == "Outbound") {
+    
       for (let departure of route.Departures) {
         eta = new Date(departure.ETALocalTime)
         arrival = subtract_time(eta, (new Date)) // current time minus arrival
@@ -50,7 +50,7 @@ function render(msg) {
         name = departure.Trip.InternalSignDesc
         routeId = route.RouteId
         departures.push({ arrival: arrival, name: name, routeId: routeId })
-      }
+      
     }
   }
   sortedDepartures = departures.sort(function (a, b) { return a.arrival - b.arrival; })

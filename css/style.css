@@ -79,6 +79,18 @@ img {
 }
 
 /* Section 1*/
+#warning{
+  width: 80px;
+    float: left;
+}
+
+#warning img{
+  margin-top: 6px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    height: 50px;
+    width: 50px;
+}
 
 #logo{
   height:100%;
@@ -150,7 +162,7 @@ font-weight: bold;
 }
 
 #alert{
-font-size: 1.5em;
+font-size: 1.9em;
 margin-inline-start: 0px;
 margin-inline-end: 0px;
 font-weight: bold;

@@ -111,7 +111,7 @@ function renderDate() {
 function renderTimetable() {
   // header auth token from TCAT
   var token = 'Bearer e5159b89-86c1-3cca-8412-59de037c674b';
-  var currStop = 100;
+  var currStop = 1351;
   $.ajax({
     url: 'https://gateway.api.cloud.wso2.com:443/t/mystop/tcat/v1/rest/StopDepartures/Get/' + currStop,
     type: 'GET',
@@ -149,7 +149,7 @@ function renderStops(currStop) {
 
 
 function render2(msg) {
-  var currStop = 100;
+  var currStop = 1351;
   for (let stop of msg) {
     if (stop.StopId == currStop) {
       var name = stop.Description;

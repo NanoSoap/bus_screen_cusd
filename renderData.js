@@ -126,6 +126,8 @@ function renderTimetable() {
   renderDate();
   renderStops();
   renderRoute();
+  outPut($('#time_info_sub').text());
+  console.log($('#time_info_sub').text())
 }
 
 

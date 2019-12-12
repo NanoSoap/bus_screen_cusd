@@ -46,7 +46,7 @@ function render(msg) {
       for (let departure of route.Departures) {
         eta = new Date(departure.ETALocalTime)
         arrival = subtract_time(eta, (new Date)) // current time minus arrival
-        console.log(arrival)
+        // console.log(arrival)
         name = departure.Trip.InternalSignDesc
         routeId = route.RouteId
         departures.push({ arrival: arrival, name: name, routeId: routeId })
@@ -73,6 +73,9 @@ function render(msg) {
       $('#dest_info').append('<div class="dest_info_sub"><h5>' + dep.name + ' </h5></div>');
     }
   }
+  var i=$('.time_info_sub:first').text();
+  console.log(i)
+  outPut(i);
 }
 
 // make the tab that displays the next stops work
@@ -103,7 +106,7 @@ function renderDate() {
   hour = (hour % 12) ? (hour % 12) : 12;
   $('#date').html("<h3>" + month + " " + day + " " + year + "</h3>" + "<h3>" + hour + ":" + minutes + " " + ampm + "</h3>");
 
-  setTimeout(renderDate, 1000);
+  //setTimeout(renderDate, 1000);
 }
 
 
@@ -126,8 +129,7 @@ function renderTimetable() {
   renderDate();
   renderStops();
   renderRoute();
-  outPut($('#time_info_sub').text());
-  console.log($('#time_info_sub').text())
+ 
 }
 
 
@@ -174,7 +176,7 @@ function renderRoute() {
 
 
 function render3(msg) {
-  console.log("testing");
+  //console.log("testing");
   /*
   var nextBus = sortedDepartures[0].routeId;
   var currentStop = msg[0].StopID;

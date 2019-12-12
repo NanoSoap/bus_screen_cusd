@@ -125,10 +125,10 @@ function renderTimetable() {
     success: render
   });
 
-
+  getAlert();
   renderDate();
   renderStops();
-  renderRoute();
+  //renderRoute();
  
 }
 
@@ -162,24 +162,41 @@ function render2(msg) {
   }
 }
 
-function renderRoute() {
+// function renderRoute() {
+//   var token = 'Bearer e5159b89-86c1-3cca-8412-59de037c674b';
+//   $.ajax({
+//     url: "https://gateway.api.cloud.wso2.com:443/t/mystop/tcat/v1/rest/Stops/GetAllStops",
+//     dataType: 'json',
+//     beforeSend: function (xhr) {
+//       xhr.setRequestHeader("Authorization", token);
+//     },
+//     success: render3
+//   });
+// }
+function getAlert() {
   var token = 'Bearer e5159b89-86c1-3cca-8412-59de037c674b';
-  $.ajax({
-    url: "https://gateway.api.cloud.wso2.com:443/t/mystop/tcat/v1/rest/Stops/GetAllStops",
+  return $.ajax({
+    url: 'https://gateway.api.cloud.wso2.com:443/t/mystop/tcat/v1/rest/PublicMessages/GetCurrentMessages',
+    type: 'GET',
     dataType: 'json',
-    beforeSend: function (xhr) {
+    beforeSend: function(xhr) {
       xhr.setRequestHeader("Authorization", token);
     },
-    success: render3
-  });
+    success: function(msg) {
+      var alerts='';
+      for (let alert of msg) {
+        
+           alerts += alert.Message;
+           alerts+=" ||";
+          
+        
+      }
+      $('#scrollalert').text(alerts);
+    },
+    error: function(XMLHttpRequest, textStatus, errorThrown) {
+      alert(errorThrown);
+    }
+    })
 }
 
 
-function render3(msg) {
-  //console.log("testing");
-  /*
-  var nextBus = sortedDepartures[0].routeId;
-  var currentStop = msg[0].StopID;
-  var nextBusDirection = sortedDepartures[0].name;
-*/
-}

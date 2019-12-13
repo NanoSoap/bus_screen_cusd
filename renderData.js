@@ -73,7 +73,7 @@ function render(msg) {
       $('#dest_info').append('<div class="dest_info_sub"><h5>' + dep.name + ' </h5></div>');
     }
   }
-  var i=$('.time_info_sub:first').text().substring(0,1);
+  var i=$('.time_info_sub:first').text().substring(0,2);
   console.log(i)
   outPut(i);
 }

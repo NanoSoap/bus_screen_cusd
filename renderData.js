@@ -73,7 +73,7 @@ function render(msg) {
       $('#dest_info').append('<div class="dest_info_sub"><h5>' + dep.name + ' </h5></div>');
     }
   }
-  var i=unique_deps[0].arrival>0?unique_deps[0].arrival:-1;
+  var i=$('.time_info_sub:first').text().substring(0,1);
   console.log(i)
   outPut(i);
 }
@@ -114,7 +114,7 @@ function renderDate() {
 function renderTimetable() {
   // header auth token from TCAT
   var token = 'Bearer e5159b89-86c1-3cca-8412-59de037c674b';
-  var currStop = 1351;
+  var currStop = 165//1351;
   $.ajax({
     url: 'https://gateway.api.cloud.wso2.com:443/t/mystop/tcat/v1/rest/StopDepartures/Get/' + currStop,
     type: 'GET',

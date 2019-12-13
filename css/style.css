@@ -177,7 +177,7 @@ font-weight: bold;
 
 #right_sec{
   height:100%;
-  width:30vw;
+  width:28vw;
   float:right;
   background-color: #33a8db;
 }
@@ -371,7 +371,7 @@ margin-block-end: 0em;
   height:3vh;
   position:relative;
   float:left;
-  left:5vw;
+  left:4vw;
   background-color:white;
   border-radius: 50%;
   margin-bottom:2vh;

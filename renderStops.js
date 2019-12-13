@@ -4,3 +4,4 @@ $('#next_name').html('<h2>Route 82</h2>')
 for (const iterator of stops_82) {
     $('#stop').append('<div class="stop_single"> <div class="circle"></div>			<div class="stop_name">	<h3>'+ iterator+'</h3>	</div></div>')
 }
+

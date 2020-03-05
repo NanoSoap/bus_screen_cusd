@@ -40,6 +40,7 @@ function subtract_time(t1, t2) {
 // render data into html
 // msg is JSON data from API
 function render(msg) {
+
   departures = []
   for (let route of msg[0].RouteDirections) {
     
@@ -71,6 +72,28 @@ function render(msg) {
       $('#time_info').append("<div class='time_info_sub'><p>" + dep.arrival + " min</p></div>");
       $("#serv_info").append("<div class='serv_info_sub'><p>" + dep.routeId + "</p></div>");
       $('#dest_info').append('<div class="dest_info_sub"><h5>' + dep.name + ' </h5></div>');
+=======
+    departures = []
+    for (let route of msg[0].RouteDirections) {
+        for (let departure of route.Departures) {
+            eta = new Date(departure.ETALocalTime)
+            arrival =  eta.getMinutes() - (new Date()).getMinutes() // current time minus arrival
+            name = departure.Trip.InternalSignDesc
+            routeId = route.RouteId
+            departures.push({arrival: arrival, name:name, routeId:routeId})
+            
+        }
+
+    }
+    console.log(departures);
+    sortedDepartures = departures.sort(function(a, b) { return a.arrival - b.arrival; })
+    for (let dep of sortedDepartures) {
+        if (dep.arrival > 0) {
+            $('#time_info').append("<div class='time_info_sub'><p>" + dep.arrival + " min</p></div>");
+            $("#serv_info").append("<div class='serv_info_sub'><p>" + dep.routeId + "</p></div>");
+            $('#dest_info').append('<div class="dest_info_sub"><h5>' + dep.name + ' </h5></div>');
+        }
+
     }
   }
   var i=$('.time_info_sub:first').text().substring(0,2);

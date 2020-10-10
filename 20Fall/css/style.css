@@ -65,12 +65,11 @@ img {
 }
 
 .section4{
+  display: inline-flex;
   position: relative;
   z-index:10;
-  width:100vw;
   height:10vh;
-  padding-left:20px;
-  padding-top:6px;
+  width: 100vw;
   color:white;
   background-color: #33a8db;
   -webkit-box-shadow: 0 -8px 12px rgba(0,0,0,0.3);
@@ -78,18 +77,31 @@ img {
           box-shadow: 0 -8px 12px rgba(0,0,0,0.3);
 }
 
+
 /* Section 1*/
-#warning{
-  width: 80px;
-    float: left;
+
+.alert_txt{
+  font-size: xx-large;
+  align-self: center;
+  z-index: 10;
+  animation: scroll 4s linear 0s infinite;
+  position: relative;
+}
+@keyframes scroll{
+  from{
+    left: 0px;
+  }
+  to{
+    left:-100%
+  }
 }
 
-#warning img{
-  margin-top: 6px;
-    /* margin-left: 10px; */
-    margin-bottom: 10px;
-    height: 50px;
-    width: 50px;
+#alert_img {
+    padding: 10px;
+    height: 10vh;
+    width: 10vh;
+    z-index: 11;
+    background-color: #33a8db;
 }
 
 #logo{

@@ -80,20 +80,18 @@ img {
 
 /* Section 1*/
 
-.alert_txt{
+#alert_txt{
   font-size: xx-large;
   align-self: center;
   z-index: 10;
-  animation: scroll 4s linear 0s infinite;
+  animation: scroll linear 0s infinite;
   position: relative;
+  white-space: nowrap;
+
 }
 @keyframes scroll{
-  from{
-    left: 0px;
-  }
-  to{
-    left:-100%
-  }
+    0%   { transform: translate(100vw, 0); }
+    100% { transform: translate(-100%, 0); }
 }
 
 #alert_img {

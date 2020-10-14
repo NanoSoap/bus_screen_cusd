@@ -3,6 +3,10 @@
 Primary style
 
 -------------------------------- */
+::-webkit-scrollbar{
+  display: none
+}
+
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -357,7 +361,7 @@ margin-block-end: 0em;
   left:75.6vw;
   background-color:white;
   width:0.5vh;
-  height:100%;
+  height:90%;
   margin-top: 5vh;
 }
 

@@ -20,8 +20,9 @@ function getAlert() {
       let message=''
       for (let index = 0; index < alerts.length; index++) {
         const element = alerts[index]['Message'];
-        message+='▶︎'
+        message+='▶︎ '
         message+=element
+        message+='     '
       }
       $('#alert_txt').text(message).css("animation-duration", message.length*0.2+width*0.003+'s')
 

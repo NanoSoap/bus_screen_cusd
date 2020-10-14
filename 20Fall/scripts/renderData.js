@@ -66,10 +66,13 @@ function render(msg) {
       }
     }
   }
+  $('#serv_info').html('')
+  $('#dest_info').html('')
+  $('#time_info').html('')
   for (let dep of unique_deps) {
     if (dep.arrival > 0) {
       $('#time_info').append("<div class='time_info_sub'><p>" + dep.arrival + " min</p></div>");
-      $("#serv_info").append("<div class='serv_info_sub'><p>" + dep.routeId + "</p></div>");
+      $('#serv_info').append("<div class='serv_info_sub'><p>" + dep.routeId + "</p></div>");
       $('#dest_info').append('<div class="dest_info_sub"><h5>' + dep.name + ' </h5></div>');
     }
   }

@@ -106,7 +106,7 @@ function renderDate() {
   hour = (hour % 12) ? (hour % 12) : 12;
   $('#date').html("<h3>" + month + " " + day + " " + year + "</h3>" + "<h3>" + hour + ":" + minutes + " " + ampm + "</h3>");
 
-  //setTimeout(renderDate, 1000);
+  setTimeout(renderDate, 1000);
 }
 
 
@@ -124,19 +124,14 @@ function renderTimetable() {
     },
     success: render
   });
-
-  getAlert();
-  renderDate();
-  renderStops();
-  //renderRoute();
- 
+  renderStops()
+  setTimeout(renderTimetable,10000)
 }
 
 
 
 // when the document is loaded render the timetable
 
-// setTimeout($(document).ready(renderTimetable), 100)
 
 
 function renderStops(currStop) {
@@ -147,20 +142,26 @@ function renderStops(currStop) {
     beforeSend: function (xhr) {
       xhr.setRequestHeader("Authorization", token);
     },
-    success: render2
+    success: (msg,testStatus,xhr)=> {
+      var currStop = 1351;
+      for (let stop of msg) {
+        if (stop.StopId == currStop) {
+          var name = stop.Description;
+          $('#title').html("<h1>" + name + "</h1>");
+        }
+      }
+    }
   });
 }
 
 
-function render2(msg) {
-  var currStop = 1351;
-  for (let stop of msg) {
-    if (stop.StopId == currStop) {
-      var name = stop.Description;
-      $('#title').html("<h1>" + name + "</h1>");
-    }
-  }
-}
+
+
+//#region launch 
+renderDate()
+renderTimetable()
+//#endregion
+
 
 // function renderRoute() {
 //   var token = 'Bearer e5159b89-86c1-3cca-8412-59de037c674b';

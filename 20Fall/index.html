@@ -2,99 +2,312 @@
 <html lang="en" class="no-js">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- auto refresh time  -->
-	<!-- <meta http-equiv="refresh" content="30" /> -->
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- auto refresh time  -->
+    <!-- <meta http-equiv="refresh" content="30" /> -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="css/style.css"> <!-- CSS reset -->
+    <!-- CSS reset -->
 
-	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
-	<link
-		href='http://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic'
-		rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
-		rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-	<!-- <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script> -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- <script src="scripts/getTimetable.js" type="text/javascript"></script>  -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <!-- <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="scripts/getTimetable.js" type="text/javascript"></script>  -->
 
-	<title>Bus Screen</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Bus Screen</title>
 </head>
 
 <body>
-	<div class="section1">
-		<div id="logo">
-			<!-- <img src="img/logo.png"> -->
-		</div>
-		<div id="title">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-block w-100" alt="First slide">
+                    <div class="section1">
+                        <div id="logo">
+                            <img src="img/logo.png">
+                        </div>
+                        <div id="title">
 
-		</div>
-		<div id="date">
-			<h3>3:40 PM</h3>
-			<h3>10/3/2018</h3>
-		</div>
+                        </div>
+                        <div id="date">
+                            <h3>3:40 PM</h3>
+                            <h3>10/3/2018</h3>
+                        </div>
 
-	</div>
-	<div class="section2">
-		<div id="service">
-			<p>Service</p>
-		</div>
-		<div id="destination">
-			<p>Destination</p>
-		</div>
-		<div id="time">
-			<p>Arriving In</p>
-		</div>
-		<div id="route">
-			<p>Arriving Next</p>
-		</div>
-	</div>
-	<div class="section3">
-		<div id="left_sec">
-			<div id="serv_info">
-			</div>
-			<div id="dest_info">
-			</div>
-			<div id="time_info">
-			</div>
-		</div>
-		<div id="right_sec">
-			<div id="hori_line">
-			</div>
-			<div id="line">
-			</div>
-			<div id="next_name">
-				<h2>Route 30</h2>
-			</div>
-			<div id="bus_line"></div>
-			<div id="stop">
+                    </div>
+                    <div class="section2">
+                        <div id="service">
+                            <p>Service</p>
+                        </div>
+                        <div id="destination">
+                            <p>Destination</p>
+                        </div>
+                        <div id="time">
+                            <p>Arriving In</p>
+                        </div>
+                        <div id="route">
+                            <p>Arriving Next</p>
+                        </div>
+                    </div>
+                    <div class="section3">
+                        <div id="left_sec">
+                            <div id="serv_info">
+                            </div>
+                            <div id="dest_info">
+                            </div>
+                            <div id="time_info">
+                            </div>
+                        </div>
+                        <div id="right_sec">
+                            <div id="hori_line">
+                            </div>
+                            <div id="line">
+                            </div>
+                            <div id="next_name">
+                                <h2>Route 30</h2>
+                            </div>
+                            <div id="bus_line"></div>
+                            <div id="stop">
 
-			</div>
-		</div>
+                            </div>
+                        </div>
 
-	</div>
-	<div class="section4">
-		<img id="alert_img" src="img/warning.png">
-		<span id="alert_txt"></span>
-	</div>
+                    </div>
+                    <div class="section4">
+                        <img id="alert_img" src="img/warning.png">
+                        <span id="alert_txt"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block w-100" alt="Second slide">
+                    <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg style="background-color: #75D939;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" enable-background="new 0 0 1920 1080" xml:space="preserve">
+		<!-- <g id="Layer_2">
+			<g>
+				<rect x="0.5" y="0.5" fill="#75D939" width="1931" height="1079"/>
+				<g>
+					<path d="M1931,1v1078H1V1H1931 M1932,0H0v1080h1932V0L1932,0z"/>
+				</g>
+			</g>
+		</g> -->
+		<g id="Layer_1">
+			<rect x="98.64" y="78.04" fill="none" width="1246.36" height="80.26"/>
+			<text transform="matrix(1 0 0 1 98.6426 128.4404)" fill="#FFFFFF" font-family="'PTSans-Bold'" font-size="72px">Today, this solar-powered shelter has: </text>
+			<g>
+				<path fill="none" stroke="#FFFFFF" stroke-width="12" stroke-miterlimit="10" d="M162.27,272h73.12c3.15,0,5.01,3.55,3.21,6.14
+					l-46.35,66.73c-1.8,2.59,0.05,6.14,3.21,6.14h36.92c3.62,0,5.29,4.49,2.56,6.86l-116.5,100.9c-3.29,2.85-8.08-1.01-5.98-4.83
+					l37.37-68.14c1.43-2.6-0.46-5.78-3.42-5.79l-41.05-0.02c-3,0-4.88-3.23-3.4-5.84l56.92-100.17
+					C159.57,272.75,160.87,272,162.27,272z"/>
+			</g>
+			<polygon fill="#FFFFFF" points="200,824 190,923 257.75,923 249.18,824 	"/>
+			<circle fill="#FFFFFF" cx="201" cy="805" r="6"/>
+			<circle fill="#FFFFFF" cx="223" cy="805" r="6"/>
+			<circle fill="#FFFFFF" cx="248" cy="805" r="6"/>
+			<circle fill="#FFFFFF" cx="236" cy="784" r="6"/>
+			<circle fill="#FFFFFF" cx="260" cy="784" r="6"/>
+			<circle fill="#FFFFFF" cx="211" cy="784" r="6"/>
+			<circle fill="#FFFFFF" cx="187" cy="784" r="6"/>
+			<circle fill="#FFFFFF" cx="201" cy="763" r="6"/>
+			<circle fill="#FFFFFF" cx="223" cy="763" r="6"/>
+			<circle fill="#FFFFFF" cx="248" cy="763" r="6"/>
+			<circle fill="#FFFFFF" cx="260" cy="745" r="6"/>
+			<circle fill="#FFFFFF" cx="236" cy="742" r="6"/>
+			<circle fill="#FFFFFF" cx="223" cy="721" r="6"/>
+			<circle fill="#FFFFFF" cx="201" cy="721" r="6"/>
+			<circle fill="#FFFFFF" cx="211" cy="742" r="6"/>
+			<circle fill="#FFFFFF" cx="187" cy="742" r="6"/>
+			<circle fill="#FFFFFF" cx="175" cy="762" r="6"/>
+			<circle fill="#FFFFFF" cx="165" cy="824" r="6"/>
+			<circle fill="#FFFFFF" cx="141" cy="827" r="6"/>
+			<circle fill="#FFFFFF" cx="108" cy="847" r="6"/>
+			<circle fill="#FFFFFF" cx="83" cy="847" r="6"/>
+			<circle fill="#FFFFFF" cx="117" cy="827" r="6"/>
+			<circle fill="#FFFFFF" cx="95" cy="824" r="6"/>
+			<circle fill="#FFFFFF" cx="72" cy="824" r="6"/>
+			<circle fill="#FFFFFF" cx="153" cy="805" r="6"/>
+			<circle fill="#FFFFFF" cx="129" cy="805" r="6"/>
+			<circle fill="#FFFFFF" cx="105" cy="805" r="6"/>
+			<circle fill="#FFFFFF" cx="83" cy="805" r="6"/>
+			<circle fill="#FFFFFF" cx="72" cy="784" r="6"/>
+			<circle fill="#FFFFFF" cx="95" cy="784" r="6"/>
+			<circle fill="#FFFFFF" cx="144" cy="784" r="6"/>
+			<circle fill="#FFFFFF" cx="165" cy="784" r="6"/>
+			<circle fill="#FFFFFF" cx="165" cy="702" r="6"/>
+			<circle fill="#FFFFFF" cx="141" cy="702" r="6"/>
+			<circle fill="#FFFFFF" cx="177" cy="721" r="6"/>
+			<circle fill="#FFFFFF" cx="153" cy="722" r="6"/>
+			<circle fill="#FFFFFF" cx="129" cy="723" r="6"/>
+			<circle fill="#FFFFFF" cx="83" cy="722" r="6"/>
+			<circle fill="#FFFFFF" cx="72" cy="744" r="6"/>
+			<circle fill="#FFFFFF" cx="95" cy="744" r="6"/>
+			<circle fill="#FFFFFF" cx="117" cy="744" r="6"/>
+			<circle fill="#FFFFFF" cx="141" cy="743" r="6"/>
+			<circle fill="#FFFFFF" cx="165" cy="743" r="6"/>
+			<circle fill="#FFFFFF" cx="83" cy="764" r="6"/>
+			<circle fill="#FFFFFF" cx="108" cy="764" r="6"/>
+			<circle fill="#FFFFFF" cx="129" cy="764" r="6"/>
+			<circle fill="#FFFFFF" cx="152" cy="764" r="6"/>
+			<circle fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" cx="1112" cy="440" r="13"/>
+			<circle fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" cx="1190" cy="440" r="13"/>
+			<line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" x1="1125" y1="440" x2="1177" y2="440"/>
+			<g>
+				<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1099,440h-16.2c-3.59,0-5.75-3.98-3.79-6.99
+					l13-19.96c1.24-1.9,3.36-3.05,5.63-3.05h25.05h92.02c1.81,0,3.95,1.23,4.29,3l2,13c0.2,1.04,0.65,1.28,1.59,1.76l2.09,1.06
+					c1.42,0.72,2.31,2.18,2.31,3.77v1.89c0,3.05-2.47,5.51-5.51,5.51H1203"/>
+			</g>
+			<g>
+				<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1215,410l-9.3-21.67
+					c-0.33-0.78-0.72-1.54-1.22-2.22c-1.06-1.44-2.45-2.62-4.07-3.42c-2.78-1.37-8.31-1.69-9.42-1.69h-45.88
+					c-3.27,0-6.33,1.6-8.21,4.28l-17,24.35"/>
+			</g>
+			<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="1160" y1="383" x2="1160" y2="410"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1235,432c0.94,2.02,2.73,4.98,6,7
+				c8.3,5.11,21.18,1.05,25-6c2.65-4.9-0.22-9.15,3-12c3.1-2.75,6.9,0.17,12-1c10.43-2.39,17.32-19.81,16-34
+				c-0.44-4.77-1.04-11.24-6-15c-7.5-5.68-21.42-2.45-26,5c-4.98,8.1,2.19,19.36-2,22c-3.4,2.15-8.53-5.02-14-3
+				c-5.77,2.13-9.99,13.75-5,20c2.46,3.08,6.32,3.8,8,4"/>
+			<rect x="284.43" y="321.49" fill="none" width="307.57" height="111.05"/>
+			<text transform="matrix(1 0 0 1 284.4316 406.0415)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="120px">2345</text>
+			<rect x="329.32" y="767.63" fill="none" width="307.57" height="111.05"/>
+			<text transform="matrix(1 0 0 1 329.3167 852.1818)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="120px">200</text>
+			<rect x="848.32" y="328.63" fill="none" width="307.57" height="126.37"/>
+			<text transform="matrix(1 0 0 1 848.3167 441.3658)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="160px">35</text>
+			<rect x="289.65" y="265.42" fill="none" width="420.35" height="55.58"/>
+			<text transform="matrix(1 0 0 1 289.6484 293.6045)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="40px">GENERATED</text>
+			<rect x="289.32" y="434.85" fill="none" width="321.68" height="55.58"/>
+			<text transform="matrix(1 0 0 1 289.3192 463.0357)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="40px">KW OF ENERGY</text>
+			<rect x="329.32" y="714.85" fill="none" width="420.35" height="55.58"/>
+			<text transform="matrix(1 0 0 1 329.3192 743.0357)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="40px">SAVED</text>
+			<rect x="329.32" y="884.85" fill="none" width="420.35" height="55.58"/>
+			<text transform="matrix(1 0 0 1 329.3192 913.0357)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="40px">LBS OF CO2</text>
+			<rect x="1058.32" y="315.65" fill="none" width="420.35" height="55.58"/>
+			<text transform="matrix(1 0 0 1 1058.3191 336.7845)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="30px">CARS FOR 1 HOUR</text>
+			<circle fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" cx="1111" cy="875.48" r="13"/>
+			<circle fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" cx="1189" cy="875.48" r="13"/>
+			<line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" x1="1124" y1="875.48" x2="1176" y2="875.48"/>
+			<g>
+				<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1098,875.48h-16.2c-3.59,0-5.75-3.98-3.79-6.99
+					l13-19.96c1.24-1.9,3.36-3.05,5.63-3.05h25.05h92.02c1.81,0,3.95,1.23,4.29,3l2,13c0.2,1.04,0.65,1.28,1.59,1.76l2.09,1.06
+					c1.42,0.72,2.31,2.18,2.31,3.77v1.89c0,3.05-2.47,5.51-5.51,5.51H1202"/>
+			</g>
+			<g>
+				<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1214,845.48l-9.3-21.67
+					c-0.33-0.78-0.72-1.54-1.22-2.22c-1.06-1.44-2.45-2.62-4.07-3.42c-2.78-1.37-8.31-1.69-9.42-1.69h-45.88
+					c-3.27,0-6.33,1.6-8.21,4.28l-17,24.35"/>
+			</g>
+			<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="1159" y1="818.48" x2="1159" y2="845.48"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1234,867.48c0.94,2.02,2.73,4.98,6,7
+				c8.3,5.11,21.18,1.05,25-6c2.65-4.9-0.22-9.15,3-12c3.1-2.75,6.9,0.17,12-1c10.43-2.39,17.32-19.81,16-34
+				c-0.44-4.77-1.04-11.24-6-15c-7.5-5.68-21.42-2.45-26,5c-4.98,8.1,2.19,19.36-2,22c-3.4,2.15-8.53-5.02-14-3
+				c-5.77,2.13-9.99,13.75-5,20c2.46,3.08,6.32,3.8,8,4"/>
+			<rect x="847.32" y="764.11" fill="none" width="307.57" height="126.37"/>
+			<text transform="matrix(1 0 0 1 847.318 876.8451)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="160px">35</text>
+			<rect x="1057.32" y="751.13" fill="none" width="420.35" height="55.58"/>
+			<text transform="matrix(1 0 0 1 1057.3206 772.2638)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="30px">CARS FOR 1 HOUR</text>
+			<circle fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" cx="1639" cy="442.48" r="13"/>
+			<circle fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" cx="1717" cy="442.48" r="13"/>
+			<line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" x1="1652" y1="442.48" x2="1704" y2="442.48"/>
+			<g>
+				<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1626,442.48h-16.2c-3.59,0-5.75-3.98-3.79-6.99
+					l13-19.96c1.24-1.9,3.36-3.05,5.63-3.05h25.05h92.02c1.81,0,3.95,1.23,4.29,3l2,13c0.2,1.04,0.65,1.28,1.59,1.76l2.09,1.06
+					c1.42,0.72,2.31,2.18,2.31,3.77v1.89c0,3.05-2.47,5.51-5.51,5.51H1730"/>
+			</g>
+			<g>
+				<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1742,412.48l-9.3-21.67
+					c-0.33-0.78-0.72-1.54-1.22-2.22c-1.06-1.44-2.45-2.62-4.07-3.42c-2.78-1.37-8.31-1.69-9.42-1.69h-45.88
+					c-3.27,0-6.33,1.6-8.21,4.28l-17,24.35"/>
+			</g>
+			<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="1687" y1="385.48" x2="1687" y2="412.48"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1762,434.48c0.94,2.02,2.73,4.98,6,7
+				c8.3,5.11,21.18,1.05,25-6c2.65-4.9-0.22-9.15,3-12c3.1-2.75,6.9,0.17,12-1c10.43-2.39,17.32-19.81,16-34
+				c-0.44-4.77-1.04-11.24-6-15c-7.5-5.68-21.42-2.45-26,5c-4.98,8.1,2.19,19.36-2,22c-3.4,2.15-8.53-5.02-14-3
+				c-5.77,2.13-9.99,13.75-5,20c2.46,3.08,6.32,3.8,8,4"/>
+			<rect x="1375.32" y="331.11" fill="none" width="307.57" height="126.37"/>
+			<text transform="matrix(1 0 0 1 1375.318 443.8451)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="160px">35</text>
+			<rect x="1585.32" y="318.13" fill="none" width="420.35" height="55.58"/>
+			<text transform="matrix(1 0 0 1 1585.3206 339.2638)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="30px">CARS FOR 1 HOUR</text>
+			<circle fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" cx="1639" cy="878.48" r="13"/>
+			<circle fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" cx="1717" cy="878.48" r="13"/>
+			<line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" x1="1652" y1="878.48" x2="1704" y2="878.48"/>
+			<g>
+				<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1626,878.48h-16.2c-3.59,0-5.75-3.98-3.79-6.99
+					l13-19.96c1.24-1.9,3.36-3.05,5.63-3.05h25.05h92.02c1.81,0,3.95,1.23,4.29,3l2,13c0.2,1.04,0.65,1.28,1.59,1.76l2.09,1.06
+					c1.42,0.72,2.31,2.18,2.31,3.77v1.89c0,3.05-2.47,5.51-5.51,5.51H1730"/>
+			</g>
+			<g>
+				<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1742,848.48l-9.3-21.67
+					c-0.33-0.78-0.72-1.54-1.22-2.22c-1.06-1.44-2.45-2.62-4.07-3.42c-2.78-1.37-8.31-1.69-9.42-1.69h-45.88
+					c-3.27,0-6.33,1.6-8.21,4.28l-17,24.35"/>
+			</g>
+			<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="1687" y1="821.48" x2="1687" y2="848.48"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M1762,870.48c0.94,2.02,2.73,4.98,6,7
+				c8.3,5.11,21.18,1.05,25-6c2.65-4.9-0.22-9.15,3-12c3.1-2.75,6.9,0.17,12-1c10.43-2.39,17.32-19.81,16-34
+				c-0.44-4.77-1.04-11.24-6-15c-7.5-5.68-21.42-2.45-26,5c-4.98,8.1,2.19,19.36-2,22c-3.4,2.15-8.53-5.02-14-3
+				c-5.77,2.13-9.99,13.75-5,20c2.46,3.08,6.32,3.8,8,4"/>
+			<rect x="1375.32" y="767.11" fill="none" width="307.57" height="126.37"/>
+			<text transform="matrix(1 0 0 1 1375.318 879.8451)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="160px">35</text>
+			<rect x="1585.32" y="754.13" fill="none" width="420.35" height="55.58"/>
+			<text transform="matrix(1 0 0 1 1585.3206 775.2638)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="30px">CARS FOR 1 HOUR</text>
+			<rect x="647.99" y="371" fill="#FFFFFF" width="121.9" height="30"/>
+			<rect x="647.99" y="423" fill="#FFFFFF" width="121.9" height="30"/>
+			<rect x="640.99" y="327.53" fill="none" width="420.01" height="55.58"/>
+			<text transform="matrix(0.9992 0 0 1 640.9927 355.7114)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="40px">WHICH</text>
+			<rect x="641.62" y="807" fill="#FFFFFF" width="121.9" height="30"/>
+			<rect x="641.62" y="859" fill="#FFFFFF" width="121.9" height="30"/>
+			<rect x="634.62" y="763.53" fill="none" width="420.01" height="55.58"/>
+			<text transform="matrix(0.9992 0 0 1 634.6183 791.7114)" fill="#FFFFFF" font-family="'SFProDisplay-Bold'" font-size="40px">WHICH</text>
+		</g>
+		</svg>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 
 
-	<script src="scripts/renderData.js"></script>
-	<script src="scripts/renderStops.js"></script>
-	<!-- <script src="/scripts/fileSaver.js"></script> -->
-	<!-- <script src="/scripts/busOutput.js"></script> -->
 
-	<script src="scripts/renderAlert.js"></script>
+
+    <script src="scripts/renderData.js"></script>
+    <script src="scripts/renderStops.js"></script>
+    <!-- <script src="/scripts/fileSaver.js"></script> -->
+    <!-- <script src="/scripts/busOutput.js"></script> -->
+
+    <script src="scripts/renderAlert.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        // set the carousel sliding interval, unit:ms
+        $('.carousel').carousel({
+            interval: 7000
+        })
+    </script>
 </body>
 
 </html>

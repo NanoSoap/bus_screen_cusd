@@ -9,8 +9,8 @@ https://api.cloud.wso2.com/store/apis/info?name=TCAT_Web_Services&version=v1&pro
 ### how to develop on local
 - Clone the repo to a local directory
 - Install node.js and npm
-- Open the terminator, change to folder root, and run npm install
+- Open the terminal, change to folder root, and enter npm install
 Npm will install the required package for this project
-- Run node index.js
+- enter node index.js
 Index.js is the main entrance of the application and it would create a localhost server to resolve HTTP requests for the page. Currently, all pages are static HTML page with js script
 - Open the browser and visit localhost:3000
